@@ -100,17 +100,6 @@ let producto9 = new Producto(
 );
 productos.push(producto1,producto2,producto3,producto4,producto5,producto6,producto7,producto8,producto9);
 
-// const arraylinks = ["https://i.ibb.co/bdz8vXT/img1-1.jpg",
-// "https://i.ibb.co/1TM2SZp/img1-2.jpg",
-// "https://i.ibb.co/L1yzYwh/img1-3.jpg",
-// "https://i.ibb.co/XVtDByT/img1-4.jpg",
-// "https://i.ibb.co/v3hmNBj/img1-5.jpg",
-// "https://i.ibb.co/dfHSm5Q/img1-6.jpg",
-// "https://i.ibb.co/7Nk01jb/img1-7.jpg",
-// "https://i.ibb.co/mC34n1w/img1-8.jpg"];
-// const guardarJson = ("arraylinks", JSON.stringify(arraylinks));
-// console.log(guardarJson);
-
 const loadingData = (estado) => {
   const loading = document.getElementById("loading");
   if (estado) {
@@ -122,13 +111,12 @@ const loadingData = (estado) => {
 const fetchProductos = async () => {
   try {
     loadingData(true);
-    const response = await fetch("./js/data.json");
-    const data = await response.json();
-    console.log(data.productos);
-    renderIndex(data);
+    const res = await axios.get("../js/data.json");
+    const json = await res.data;
+    renderIndex(json);
   } catch (error) {
-    let message = error.statusText || "Ocurrió un error al cargar el json";
-    console.log(message, "Error al cargar el archivo json");
+    let message = error.statusText || "Ocurrió un error al cargar los datos";
+    console.log(error,`${message}`);
   } finally {
     loadingData(false);
   }
@@ -136,14 +124,13 @@ const fetchProductos = async () => {
 
 const renderIndex = (data) => {
   let div = document.getElementById("contenedor-div");
-  console.log(data.productos);
   data.productos.forEach((el) => {
-    const { id, nombre, descripcion, precio, img, cantidad } = el;
+    const { id, nombre, descripcion, precio, img, cantidad, alt, title } = el;
     let productoRenderizado = document.createElement("div");
     productoRenderizado.innerHTML = `
         <div class="my-2 px-2">
             <div class="card card-index" style="width: 15rem;">
-                <img src="${img}" class="card-img-top gallery-item" alt="...">
+                <img src="${img}" class="card-img-top gallery-item" alt="${alt}" title="${title}"">
                 <div class="card-body">
                     <h5 class="card-title text-decoration-underline text-center">${nombre}</h5>
                     <p class="card-text text-center">${descripcion}.</p>

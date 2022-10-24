@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const getAll = async () => {
   try {
+    loadingData(true);
     const res = await axios.get("../js/data.json");
     const json = await res.data;
     renderCardPiezasGraficas(json);
   } catch (error) {
-    let message = error.statusText || "Ocurrió un error al cargar el json";
-    console.log(message, "Error al cargar el archivo json");
+    let message = error.statusText || "Ocurrió un error al cargar los datos";
+    console.log(error,`${message}`);
   } finally {
     loadingData(false);
   }
@@ -31,6 +32,8 @@ const renderCardPiezasGraficas = (data) => {
   data.piezasGraficas.forEach((item) => {
     const clone = templateCard.cloneNode(true);
     clone.querySelector(".card-img-top").setAttribute("src",item.url);
+    clone.querySelector(".card-img-top").setAttribute("alt",item.nombre);
+    clone.querySelector(".card-img-top").setAttribute("title",item.title);
     fragment.appendChild(clone);
   });
 

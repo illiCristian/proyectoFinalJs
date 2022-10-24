@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const getAll = async () => {
   try {
+    loadingData(true)
     const res = await axios.get("../js/data.json");
     const json = await res.data;
     renderCardsBordados(json);
   } catch (error) {
     let message = error.statusText || "Ocurrió un error al cargar los datos";
-    console.log(message, "Error al cargar el archivo los datos");
-  } finally {
+    console.log(error,`${message}`);
+  } finally { 
     loadingData(false);
   }
 };
@@ -24,8 +25,22 @@ const loadingData = (estado) => {
   }
 };
 
-// renderCardsBordados().then;
- const renderCardsBordados = (data) => {
+const renderCardsBordados = (data) => {
+  const fragment = document.createDocumentFragment();
+  const cards = document.getElementById("card-dinamicas-bordados");
+  const templateCard = document.getElementById("template-card-bordados").content;
+data.bordados.forEach((item) => {
+  const clone = templateCard.cloneNode(true);
+  clone.querySelector(".card-img-top").setAttribute("src",item.url);
+  clone.querySelector(".card-img-top").setAttribute("alt",item.nombre);
+  clone.querySelector(".card-img-top").setAttribute("title",item.title);
+  fragment.appendChild(clone);
+});
+
+cards.appendChild(fragment);
+}
+
+/*  const renderCardsBordados = (data) => {
   console.log(data);
   const bordados = document.getElementById("card-bordados");
   data.bordados.forEach((item) => {
@@ -36,7 +51,7 @@ const loadingData = (estado) => {
     </div>`;
     bordados.append(bordadoRenderizado);
   });
-}; 
+};  */
 
 
 

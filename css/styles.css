@@ -1,8 +1,4 @@
-.card-img-top{
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 5px;
-}
+
 .p-carrito_vacio{
   font-size: 35px;
 }
@@ -43,7 +39,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: flex-start; */
   padding-left: 10px;
 }
 .card-carrito_botones{
@@ -79,6 +74,8 @@
     border-radius: 20px;
     border: solid 1px;
     cursor: pointer;
+    height: 220px !important;
+    object-fit: cover;
   }
 
 .btn-carrito-2{
@@ -98,8 +95,6 @@
 .container-carrito{
   background-color: #B73E3E !important;
 }
-
-
 #boton-carrito{
   border: none;
   color: royalblue;
@@ -216,11 +211,24 @@ header {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.card img{
-  height: 220px !important;
-  object-fit: cover;
-  
-} 
+.card-seccion{
+  padding: 13px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px black !important;
+  width: 300px;
+  height: 250px;
+  cursor: pointer;
+}
+/* .card-seccion img{
+  object-fit: cover !important;
+} */
+/* @media screen and (max-width: 750px) {
+  .card img{
+    height: 300px !important;
+  }
+} */
+
 .menu {
   grid-area: menu;
   /* background-color: rgb(197, 31, 38); */
@@ -251,7 +259,7 @@ header {
 .menu__items {
   display: flex;
   list-style: none;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 .menu__items li {
   border-radius: 3px;
@@ -410,11 +418,6 @@ header {
   width: 100%;
   height: 100%;
 }
-/* .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 
 @media screen and (max-width: 800px) {
   .grid-container {

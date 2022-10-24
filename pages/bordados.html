@@ -64,16 +64,30 @@
     </nav>
   </header>
   <!-- cards dinamicas -->
-  <section class="gallery min-vh-100 animate__animated animate__zoomIn" >
+  <!-- <section class="gallery min-vh-100 animate__animated animate__zoomIn" >
     <div class="container-lg">
       <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3" id="card-bordados">
       </div>
     </div>
-  </section>
-  <!-- loading data -->
-  <section class="d-flex align-items-center d-none" id="loading">
-    <strong>Cargando...</strong>
-    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </section> -->
+  <div class="container my-5">
+    <!-- Spinner Cargando -->
+    <section class="d-flex align-items-center d-none" id="loading">
+      <strong>Cargando...</strong>
+      <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    </section>
+    <!-- Cards Dinamicas -->
+    <section class="row" id="card-dinamicas-bordados"></section>
+  </div>
+
+  <section>
+    <template id="template-card-bordados">
+      <article class="col-12 col-md-6 col-lg-3 mb-3">
+        <div class="text-center">
+          <img  alt=".." class="card-img-top card-seccion gallery-item"/>
+        </div>
+      </article>
+    </template>
   </section>
   <!-- Modal -->
   <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
