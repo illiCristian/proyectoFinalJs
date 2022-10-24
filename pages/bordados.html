@@ -5,14 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="keywords"
     content="diseño, diseños personalizados, remeras estampadas, remeras personalizadas, estampados, bordados, impresion, impresion 3d, diseño digital">
-
   <meta name="description" content="En esta seccion encontraras remeras estampadas, personalizadas">
-
   <script src="https://kit.fontawesome.com/4061d47edd.js" crossorigin="anonymous"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,8 +27,11 @@
         <label for="check" class="checkbtn">
           <i class="menu-icon"><img src="../img/buttom.png" alt="imagen de menu hamburguesa" title="menu"></i>
         </label>
+        <button type="button" class="boton-carrito-fa btn-carrito-2" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i><span
+            id="contador1">0</span></button>
         <ul class="menu__items">
-          <li class="font2"><a href="../index.html" class="font3">Inicio</a></li>
+          <li class="font2"><a href="../index.html" class="font3">Shop</a></li>
           <li>
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle font3 desplegable" type="button"
@@ -63,13 +62,7 @@
       </div>
     </nav>
   </header>
-  <!-- cards dinamicas -->
-  <!-- <section class="gallery min-vh-100 animate__animated animate__zoomIn" >
-    <div class="container-lg">
-      <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3" id="card-bordados">
-      </div>
-    </div>
-  </section> -->
+
   <div class="container my-5">
     <!-- Spinner Cargando -->
     <section class="d-flex align-items-center d-none" id="loading">
@@ -190,11 +183,13 @@
   </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="../js/bordados.js"></script>
+  <script src="../js/bordados.js" type="module"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/index.js" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.min.js">
   </script>
   <script>new WOW().init();</script>

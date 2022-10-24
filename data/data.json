@@ -1,0 +1,174 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Bolsitas Cumpleaños",
+        "descripcion": "Papel fotografico 120 gr, 17 cm x 10,5 cm x 3,5 cm",
+        "precio": 150,
+        "img": "https://madaradesign.netlify.app/img/disenos%20personalizados/linea1%20(3).jpeg",
+        "cantidad": 0,
+        "alt": "Bolsitas Cumpleaños",
+        "title": "Bolsitas Cumpleaños"
+      },
+      {
+        "id": 2,
+        "nombre": "Pokemones de apego",
+        "descripcion": "20 cm de alto, relleno de vellon siliconado",
+        "precio": 400,
+        "img": "https://i.ibb.co/v30CSMN/Whats-App-Image-2022-09-28-at-10-05-41-1.jpg",
+        "cantidad": 0,
+        "alt": "Pokemones de apego",
+        "title": "Muñeco de apego"
+      },
+      {
+        "id": 3,
+        "nombre": "Vaso Acrilico",
+        "descripcion": "Personalizado con vinilo holografico",
+        "precio": 500,
+        "img": "https://i.ibb.co/mvTRtfF/vaso.jpg",
+        "cantidad": 0,
+        "alt": "Vaso Acrilico",
+        "title": "Vaso Acrilico personalizado"
+      },
+      {
+        "id": 4,
+        "nombre": "Muñecos de apego",
+        "descripcion": "20 cm aprox, rellenos de vellon siliconado",
+        "precio": 400,
+        "img": "https://i.ibb.co/Lx7v4y5/Whats-App-Image-2022-09-28-at-10-05-42.jpg",
+        "cantidad": 0,
+        "alt": "Muñecos de apego",
+        "title": "Muñeco de apego"
+      },
+      {
+        "id": 5,
+        "nombre": "Cartuchera",
+        "descripcion": "21cm x 12cm personalizable",
+        "precio": 400,
+        "img": "https://i.ibb.co/fqQsVxw/Whats-App-Image-2022-09-28-at-10-05-41.jpg",
+        "cantidad": 0,
+        "alt": "Cartuchera",
+        "title": "Cartuchera personalizada"
+      },
+      {
+        "id": 6,
+        "nombre": "Taza HellFire Club!",
+        "descripcion": "Ceramica",
+        "precio": 1000,
+        "img": "https://i.ibb.co/XFQyVqQ/Whats-App-Image-2022-09-28-at-10-05-42-2.jpg",
+        "cantidad": 0,
+        "alt": "Taza HellFire Club! Stranger Things",
+        "title": "Taza HellFire Club! Stranger Things"
+      },
+      {
+        "id": 7,
+        "nombre": "Gorra trucker",
+        "descripcion": "Parche bordado personalizable",
+        "precio": 1000,
+        "img": "https://i.ibb.co/QHmBJp3/Whats-App-Image-2022-09-28-at-10-05-42-1.jpg",
+        "cantidad": 0,
+        "alt": "Gorra trucker",
+        "title": "Parche bordado personalizable"
+      },
+      {
+        "id": 8,
+        "nombre": "Leo Messi + Copa Mundial",
+        "descripcion": "20 cm relleno de vellon siliconado",
+        "precio": 600,
+        "img": "https://i.ibb.co/sQYxdgd/Whats-App-Image-2022-09-28-at-10-05-40.jpg",
+        "cantidad": 0,
+        "alt": "Leo Messi + Copa Mundial",
+        "title": "Muñeco de apego, Leo Messi + Copa Mundial"
+      },
+      {
+        "id": 9,
+        "nombre": "Porta Sube",
+        "descripcion": "Personalizados con vinilo",
+        "precio": 250,
+        "img": "https://i.ibb.co/cFmMk41/Whats-App-Image-2022-09-29-at-18-39-54.jpg",
+        "cantidad": 0,
+        "alt": "Porta Sube",
+        "title": "Personalizados con vinilo"
+      }
+    ],
+    "bordados": [
+      {
+        "url": "https://i.ibb.co/bdz8vXT/img1-1.jpg",
+        "nombre": "Mariposa Bordada",
+        "title": "Mariposa Bordada Diseño personalizados"
+      },
+      {
+        "url": "https://i.ibb.co/1TM2SZp/img1-2.jpg",
+        "nombre": "Parche bordado",
+        "title": "Parche bordado, Diseño personalizados"
+      },
+      {
+        "url": "https://i.ibb.co/7Nk01jb/img1-3.jpg",
+        "nombre": "Gorra Gamer bordada",
+        "title": "Gorra Gamer bordada, league of legends, atari"
+      },
+      {
+        "url": "https://i.ibb.co/mC34n1w/img1-8.jpg",
+        "nombre": "Gorra Hermetica",
+        "title": "Gorra Hermetica Diseño personalizados"
+      },
+      {
+        "url": "https://i.ibb.co/XVtDByT/img1-4.jpg",
+        "nombre": "Barbijos Bordados",
+        "title": "Barbijos Bordados Diseño personalizados"
+      },
+      {
+        "url": "https://i.ibb.co/v3hmNBj/img1-5.jpg",
+        "nombre": "Parche bordado",
+        "title": "Parche bordado Diseño personalizados"
+      }
+    ],
+    "piezasGraficas": [
+      {
+        "url": "https://i.ibb.co/4VpCzBc/linea1-1.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/9Hqd2m0/linea1-2.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/svVS209/linea1-3.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/Rb5Ynd9/linea2-1.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/S7SP1JB/linea2-2.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/XjnhYzZ/linea2-3.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/Pcdbwns/linea3-1.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/hWk3vDk/linea3-2.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      },
+      {
+        "url": "https://i.ibb.co/N6xG4J6/linea3-3.jpg",
+        "nombre": "Bolsitas de cumpleaños personalizadas",
+        "title": "Diseño perzonalizados para cumpleaños"
+      }
+    ]
+  }
+  

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const getAll = async () => {
   try {
     loadingData(true);
-    const res = await axios.get("../js/data.json");
+    const res = await axios.get("../data/data.json");
     const json = await res.data;
     renderCardPiezasGraficas(json);
   } catch (error) {

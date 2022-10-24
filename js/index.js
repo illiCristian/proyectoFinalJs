@@ -111,7 +111,7 @@ const loadingData = (estado) => {
 const fetchProductos = async () => {
   try {
     loadingData(true);
-    const res = await axios.get("../js/data.json");
+    const res = await axios.get("../data/data.json");
     const json = await res.data;
     renderIndex(json);
   } catch (error) {
@@ -121,7 +121,6 @@ const fetchProductos = async () => {
     loadingData(false);
   }
 };
-
 const renderIndex = (data) => {
   let div = document.getElementById("contenedor-div");
   data.productos.forEach((el) => {
@@ -206,7 +205,7 @@ const borrarItemCarr = (prod) => {
   actualizarCarrito();
 };
 
-const sumarItemCarr = (prod) => {
+ const sumarItemCarr = (prod) => {
   const item = carrito.find((el) => el.id === prod);
   precio = productos.find((el) => el.id === prod);
   item.cantidad = item.cantidad + 1;

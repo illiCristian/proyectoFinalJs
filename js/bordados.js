@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   getAll();
 });
@@ -5,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const getAll = async () => {
   try {
     loadingData(true)
-    const res = await axios.get("../js/data.json");
+    const res = await axios.get("../data/data.json");
     const json = await res.data;
     renderCardsBordados(json);
   } catch (error) {
@@ -36,23 +37,8 @@ data.bordados.forEach((item) => {
   clone.querySelector(".card-img-top").setAttribute("title",item.title);
   fragment.appendChild(clone);
 });
-
 cards.appendChild(fragment);
 }
-
-/*  const renderCardsBordados = (data) => {
-  console.log(data);
-  const bordados = document.getElementById("card-bordados");
-  data.bordados.forEach((item) => {
-    let bordadoRenderizado = document.createElement("div");
-    bordadoRenderizado.innerHTML = `
-    <div class="col">
-          <img src="${item.url}" class="gallery-item" title="Bordado mariposa con nombre" alt="Nombre bordado">
-    </div>`;
-    bordados.append(bordadoRenderizado);
-  });
-};  */
-
 
 
  
