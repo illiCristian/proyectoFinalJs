@@ -98,7 +98,8 @@ let producto9 = new Producto(
   "https://i.ibb.co/cFmMk41/Whats-App-Image-2022-09-29-at-18-39-54.jpg",
   0
 );
-productos.push(producto1,producto2,producto3,producto4,producto5,producto6,producto7,producto8,producto9);
+productos.push(producto1,producto2,producto3,producto4,producto5,producto6,producto7,producto8,producto9
+);
 
 const loadingData = (estado) => {
   const loading = document.getElementById("loading");
@@ -111,12 +112,12 @@ const loadingData = (estado) => {
 const fetchProductos = async () => {
   try {
     loadingData(true);
-    const res = await axios.get("../data/data.json");
+    const res = await axios.get("./data/data.json");
     const json = await res.data;
     renderIndex(json);
   } catch (error) {
     let message = error.statusText || "Ocurrió un error al cargar los datos";
-    console.log(error,`${message}`);
+    console.log(error, `${message}`);
   } finally {
     loadingData(false);
   }
@@ -162,7 +163,11 @@ const renderIndex = (data) => {
 };
 const actualizarCarrito = () => {
   carrito.length === 0
-    ? (contenedorCarrito.innerHTML = `<p class="p-carrito_vacio">El carrito de compras esta vacio<p>`)
+    ? (contenedorCarrito.innerHTML = `<p class="p-carrito_vacio">El carrito de compras esta vacio<p>
+    <div>
+    <a href="./index.html"><button class="boton uno bg-gradient" type="button"><i class="fas fa-regular fa-shop"></i> Ir al shop</button></a>
+    </div>
+    `)
     : (contenedorCarrito.innerHTML = "");
   carrito.forEach((prod) => {
     const { id, nombre, descripcion, precio, cantidad, img } = prod;
@@ -204,7 +209,7 @@ const borrarItemCarr = (prod) => {
   actualizarCarrito();
 };
 
- const sumarItemCarr = (prod) => {
+const sumarItemCarr = (prod) => {
   const item = carrito.find((el) => el.id === prod);
   precio = productos.find((el) => el.id === prod);
   item.cantidad = item.cantidad + 1;
