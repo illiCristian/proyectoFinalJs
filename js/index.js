@@ -189,7 +189,6 @@ const actualizarCarrito = () => {
              </div>
     </div>
      `;
-
     contenedorCarrito.appendChild(carritoActualizado);
   });
   localStorage.setItem("carrito", JSON.stringify(carrito));
