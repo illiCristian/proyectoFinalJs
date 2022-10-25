@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 const productos = [];
+console.log(productos);
 class Producto {
   constructor(id, nombre, descripcion, precio, img, cantidad) {
     this.id = id;
@@ -100,15 +101,6 @@ let producto9 = new Producto(
 );
 productos.push(producto1,producto2,producto3,producto4,producto5,producto6,producto7,producto8,producto9
 );
-
-const loadingData = (estado) => {
-  const loading = document.getElementById("loading");
-  if (estado) {
-    loading.classList.remove("d-none");
-  } else {
-    loading.classList.add("d-none");
-  }
-};
 const fetchProductos = async () => {
   try {
     loadingData(true);
@@ -120,6 +112,14 @@ const fetchProductos = async () => {
     console.log(error, `${message}`);
   } finally {
     loadingData(false);
+  }
+};
+const loadingData = (estado) => {
+  const loading = document.getElementById("loading");
+  if (estado) {
+    loading.classList.remove("d-none");
+  } else {
+    loading.classList.add("d-none");
   }
 };
 const renderIndex = (data) => {
@@ -178,7 +178,7 @@ const actualizarCarrito = () => {
           <img src="${img}" class="carrito-img" alt="...">
         </div>
             <div class="carrito-body">
-              <h5 class="card-title text-decoration-underline text-uppercase text-white">${nombre}</h5>
+              <h5 id="${id}" class="card-title text-decoration-underline text-uppercase text-white">${nombre}</h5>
               <p class="card-text">${descripcion}.<br>
                Cantidad: ${cantidad}<br>
                Precio: $${precio}</p>
@@ -252,3 +252,13 @@ vaciarCarrito.addEventListener("click", () => {
     });
   }
 });
+document.addEventListener("click", (e)=>{
+  if(e.target.classList.contains("gallery-item")){
+    const src = e.target.getAttribute("src");
+    const nombre = productos.find(((el) => src === el.img));
+    document.querySelector(".modal-img").src = src;
+    document.querySelector(".modal-title1").textContent = nombre.nombre;
+    const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'));
+    myModal.show();
+}
+})
